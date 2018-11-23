@@ -20,7 +20,7 @@ void inputOfMatrix(int matrix[][N]);
 void outputOfMatrix(int matrix[][N]);
 void outputOfArray(int array[], const int size_of_array);
 void calcSumElementsEachRowMatrixOverMainDiagonal(int matrix[][N],int array[]);
-float calcGeometricMean(int array[],const int size_of_array);
+float calculateGeometricMeanInArray(int array[],const int size_of_array);
 
 int main()
 {
@@ -36,7 +36,7 @@ int main()
 	calcSumElementsEachRowMatrixOverMainDiagonal(matrix, arraySumElements);
 	printf("\nAn array of sum of elements in each row over the main diagonal of the matrix : \n");
 	outputOfArray(arraySumElements,N - 1);
-	printf("\nGeometric mean = %f\n", calcGeometricMean(arraySumElements,N - 1));
+	printf("\nGeometric mean = %f\n", calculateGeometricMeanInArray(arraySumElements,N - 1));
 	printf("\nPress any key to end program ...\n");
 	_getch();
 	return 0;
@@ -113,7 +113,7 @@ void calcSumElementsEachRowMatrixOverMainDiagonal(int matrix[][N],int array[])
 	return;
 }
 
-float calcGeometricMean(int array[], const int count_of_elements)
+float calculateGeometricMeanInArray(int array[], const int count_of_elements)
 {
 	float geometricMean = 1;
 	for (int i = 0; i < count_of_elements; ++i) {
